@@ -152,7 +152,9 @@ def page(path, title, desc, body, active="", jsonld=None, noindex=False):
 <meta property="og:description" content="{esc(desc)}">
 <meta name="theme-color" content="#0f1829">
 {og_image}
-<link rel="icon" href="{rel}assets/img/favicon.png" type="image/png">
+<link rel="icon" href="{rel}assets/img/favicon.png" type="image/png" media="(prefers-color-scheme: light)">
+<link rel="icon" href="{rel}assets/img/favicon-dark.png" type="image/png" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="{rel}favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="{rel}assets/img/apple-touch-icon.png">
 <link rel="preload" href="{rel}assets/fonts/cormorant-garamond-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="{rel}assets/css/style.css">

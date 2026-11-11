@@ -45,19 +45,28 @@ for tag, rgb in (("navy", NAVY), ("light", CREAM)):
     save(tint(icon, rgb), f"logo-icone-{tag}.png", height=360)
     save(tint(name, rgb), f"logo-nome-{tag}.png", width=1000)
 
-# favicon e ícones de app (ícone claro sobre azul-marinho)
+# favicon: fundo transparente, em duas versões (aba clara e aba escura)
+def square(rgb, size, pad=0.04):
+    ic = tint(icon, rgb)
+    h = int(size * (1 - 2 * pad)); w = round(ic.width * h / ic.height)
+    ic = ic.resize((w, h), Image.LANCZOS)
+    t = Image.new("RGBA", (size, size), (0, 0, 0, 0))
+    t.alpha_composite(ic, ((size - w) // 2, (size - h) // 2))
+    return t
+square(NAVY, 128).save(OUT / "favicon.png", optimize=True)
+square(CREAM, 128).save(OUT / "favicon-dark.png", optimize=True)
+square(NAVY, 256).save(ROOT / "docs" / "favicon.ico", sizes=[(16, 16), (32, 32), (48, 48)])
+
+# ícone de app (iOS exige fundo opaco)
 BG = (13, 22, 38)
 def tile(size, pad=0.16):
     t = Image.new("RGBA", (size, size), BG + (255,))
     ic = tint(icon, CREAM)
-    h = int(size * (1 - 2 * pad))
-    w = round(ic.width * h / ic.height)
-    if w > size * (1 - 2 * pad):
-        w = int(size * (1 - 2 * pad)); h = round(ic.height * w / ic.width)
+    h = int(size * (1 - 2 * pad)); w = round(ic.width * h / ic.height)
     ic = ic.resize((w, h), Image.LANCZOS)
     t.alpha_composite(ic, ((size - w) // 2, (size - h) // 2))
     return t
-tile(64).save(OUT / "favicon.png"); tile(180).save(OUT / "apple-touch-icon.png")
+tile(180).save(OUT / "apple-touch-icon.png")
 
 # imagem de compartilhamento (WhatsApp, LinkedIn, Google)
 og = Image.new("RGBA", (1200, 630), BG + (255,))

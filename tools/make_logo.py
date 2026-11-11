@@ -11,7 +11,6 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 NAVY = (38, 53, 87)        # cor original da logo (#263557)
 CREAM = (243, 239, 230)    # versão clara, para fundos escuros
-GOLD = (196, 160, 104)
 
 
 def bbox(im, thr=8):
@@ -50,7 +49,7 @@ for tag, rgb in (("navy", NAVY), ("light", CREAM)):
 BG = (13, 22, 38)
 def tile(size, pad=0.16):
     t = Image.new("RGBA", (size, size), BG + (255,))
-    ic = tint(icon, GOLD if False else CREAM)
+    ic = tint(icon, CREAM)
     h = int(size * (1 - 2 * pad))
     w = round(ic.width * h / ic.height)
     if w > size * (1 - 2 * pad):

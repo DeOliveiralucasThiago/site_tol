@@ -193,8 +193,8 @@ def build_home():
     rel = ""
     cards = ""
     for a in AREAS:
-        feat = " featured" if a.get("destaque") else ""
-        tag = '<span class="tag">Foco principal</span>' if a.get("destaque") else ""
+        feat = ""
+        tag = ""
         cards += f"""<article class="card{feat}">{tag}{ICONS[a['icone']]}<h3>{esc(a['titulo'])}</h3>
 <p>{esc(a['resumo'])}</p><a class="more" href="areas-de-atuacao/{a['slug']}/">Saiba mais</a></article>"""
     d = by_slug(DUVIDAS)
@@ -226,8 +226,9 @@ def build_home():
 <div class="grid cols-4">{cards}</div></div></section>
 <section class="dark"><div class="wrap about-split">
 <div><span class="eyebrow">Sobre</span><h2>Direito e tecnologia, lado a lado</h2>
-<p>Sou advogado desde 2016 e uni a formação jurídica ao estudo de análise de dados e sistemas. Isso me permite entender como os dados realmente circulam na sua empresa, e não apenas redigir os documentos.</p>
-<ul class="checks"><li>{esc(C['oab'])}</li><li>Pós-graduado em Direito Civil e Processual Civil</li><li>Pós-graduado em LGPD</li><li>Graduado em Análise e Desenvolvimento de Sistemas</li></ul>
+<p>Sou Thiago de Oliveira Lucas, advogado desde 2016, com atuação em Direito Civil e Empresarial. Hoje concentro boa parte do meu trabalho na proteção de dados.</p>
+<p>Minha formação em tecnologia e análise de dados me permite entender como a informação circula dentro da empresa e traduzir a LGPD para a rotina do negócio, de forma prática e proporcional ao seu porte.</p>
+<ul class="checks"><li>Pós-graduado em LGPD</li><li>Pós-graduado em Direito Civil e Processual Civil</li><li>Graduado em Análise e Desenvolvimento de Sistemas</li><li>Certificação profissional em Análise de Dados (Google)</li></ul>
 <a class="btn" href="sobre/">Conheça minha trajetória</a></div>
 {photo_html(rel)}
 </div></section>
@@ -258,8 +259,8 @@ def build_areas():
     rel = "../"
     cards = ""
     for a in AREAS:
-        feat = " featured" if a.get("destaque") else ""
-        tag = '<span class="tag">Foco principal</span>' if a.get("destaque") else ""
+        feat = ""
+        tag = ""
         cards += f"""<article class="card{feat}">{tag}{ICONS[a['icone']]}<h3>{esc(a['titulo'])}</h3>
 <p>{esc(a['resumo'])}</p><a class="more" href="{a['slug']}/">Saiba mais</a></article>"""
     body = head(rel, [("", "Início")], "Áreas de atuação",

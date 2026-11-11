@@ -13,7 +13,6 @@ AREAS = [
         "slug": "lgpd-e-protecao-de-dados",
         "titulo": "LGPD e Proteção de Dados",
         "icone": "dados",
-        "destaque": True,
         "resumo": "Adequação à LGPD, políticas de privacidade, contratos com fornecedores e atuação como encarregado (DPO).",
         "chamada": "Adequação à LGPD que cabe na rotina e no porte da sua empresa.",
         "meta": "Advogado em Vila Velha/ES para adequação à LGPD: mapeamento de dados, política de privacidade, contratos, DPO e resposta a incidentes.",

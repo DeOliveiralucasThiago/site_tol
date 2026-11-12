@@ -19,7 +19,7 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "docs"
 
 CONFIG = {
-    "nome_site": "TOL Advocacia",
+    "nome_site": "TOL - Advocacia",
     "advogado": "Thiago de Oliveira Lucas",
     "oab": "OAB/ES nº 27.341",
     "telefone_exibicao": "(27) 98822-0682",
@@ -246,7 +246,7 @@ def build_home():
         "knowsAbout": ["LGPD", "Proteção de Dados", "Contratos", "Direito Civil", "Direito de Família"],
         **({"url": C["site_url"] + "/"} if C["site_url"] else {}),
     }]
-    page("", "TOL Advocacia — LGPD, Contratos e Direito Civil em Vila Velha/ES",
+    page("", "TOL - Advocacia",
          "Consultoria e assessoria jurídica em LGPD e proteção de dados, contratos, direito civil e direito de família. Advocacia em Vila Velha/ES, com atendimento presencial e online.",
          body, "home", ld)
 
@@ -361,7 +361,7 @@ def build_contato():
 <aside class="aside"><div class="box dark"><h3>Atendimento rápido</h3><p style="font-size:.92rem">Clique para abrir uma conversa já com uma mensagem inicial.</p>
 <a class="btn" href="{wa()}" target="_blank" rel="noopener">{WA_SVG} Falar no WhatsApp</a></div></aside>
 </div></section>"""
-    page("contato/", "Contato", "Entre em contato com TOL Advocacia pelo WhatsApp ou e-mail. Atendimento em Vila Velha/ES e online.", body, "contato")
+    page("contato/", "Contato", "Entre em contato com a TOL - Advocacia pelo WhatsApp ou e-mail. Atendimento em Vila Velha/ES e online.", body, "contato")
 
 
 def build_privacidade():
@@ -381,7 +381,7 @@ def build_privacidade():
 <p>Nos termos do art. 18 da LGPD, você pode solicitar confirmação de tratamento, acesso, correção, anonimização, eliminação, portabilidade e informações sobre compartilhamento, bem como revogar consentimento, quando for o caso. Basta enviar sua solicitação para o e-mail acima.</p>
 <p class="note">Última atualização: novembro de 2026.</p>
 </div></section>"""
-    page("privacidade/", "Política de Privacidade", "Política de Privacidade do site TOL Advocacia.", body)
+    page("privacidade/", "Política de Privacidade", "Política de Privacidade do site TOL - Advocacia.", body)
 
 
 def build_404():

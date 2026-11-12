@@ -203,16 +203,6 @@ def build_home():
     destaques = "".join(
         f'<li><a href="duvidas/{s}/">{esc(d[s]["pergunta"])}</a></li>' for s in ("lgpd-adequar-empresa", "vazamento-de-dados", "o-que-nao-pode-faltar-em-um-contrato")
     )
-    trust = [
-        ("oab", f"{C['oab']}"),
-        ("cal", "Advogado desde 2016"),
-        ("chip", "Formação em Direito e em Tecnologia"),
-        ("chat", "Atendimento presencial e online"),
-    ]
-    trust_html = "".join(
-        f'<li><svg viewBox="0 0 24 24" aria-hidden="true">{ICONS[k].split(">",1)[1].rsplit("</svg>",1)[0]}</svg><span>{t}</span></li>'
-        for k, t in trust
-    )
     body = f"""
 <section class="hero"><div class="wrap">
 <span class="eyebrow">Advocacia · {esc(C['cidade'])} e online</span>
@@ -221,7 +211,6 @@ def build_home():
 <div class="hero-actions"><a class="btn" href="{wa()}" target="_blank" rel="noopener">{WA_SVG} Falar no WhatsApp</a>
 <a class="btn ghost" href="areas-de-atuacao/">Conheça as áreas de atuação</a></div>
 </div></section>
-<div class="trust"><div class="wrap"><ul>{trust_html}</ul></div></div>
 <section><div class="wrap">
 <div class="section-head"><span class="eyebrow">Áreas de atuação</span><h2>Soluções jurídicas com foco em prevenção</h2>
 <p>Atuação consultiva e contenciosa, sempre com explicações objetivas sobre cada etapa.</p></div>

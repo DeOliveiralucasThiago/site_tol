@@ -366,11 +366,12 @@ SOBRE_PARAGRAFOS = [
     "Casado e cristão, procura levar para o trabalho os valores em que acredita: respeito, honestidade e cuidado com as pessoas.",
 ]
 
+# Lista exibida no botão "Formação" (sem instituições).
 FORMACAO = [
-    ("Pós-graduado em Lei Geral de Proteção de Dados", "Legale Educacional · 2025–2026"),
-    ("Graduado em Análise e Desenvolvimento de Sistemas", "Gran Cursos Online · 2023–2025"),
-    ("Pós-graduado em Direito Civil e Processual Civil", "Legale Educacional · 2021–2022"),
-    ("Bacharelado em Direito", "Universidade Vila Velha (UVV) · 2011–2015"),
-    ("Certificado Profissional de Análise de Dados", "Google"),
-    ("Compliance e Proteção de Dados · Introdução à LGPD", "Certificações complementares"),
+    "Pós-graduado em Lei Geral de Proteção de Dados (LGPD)",
+    "Graduado em Análise e Desenvolvimento de Sistemas",
+    "Pós-graduado em Direito Civil e Processual Civil",
+    "Bacharel em Direito",
+    "Certificado Profissional em Análise de Dados",
+    "Cursos de Compliance e Proteção de Dados",
 ]

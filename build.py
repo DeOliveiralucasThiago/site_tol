@@ -82,6 +82,12 @@ def photo_html(rel):
     return f'<div class="photo"><div class="ph"><img src="{rel}assets/img/logo-icone-light.png" alt="" width="313" height="360"><small>Foto em breve</small></div></div>'
 
 
+def edu_html(dark):
+    itens = "".join(f"<li>{esc(t)}</li>" for t in FORMACAO)
+    cls = "ghost" if dark else "outline"
+    return f'<details class="edu"><summary class="btn {cls}">Formação</summary><ul class="edu-list">{itens}</ul></details>'
+
+
 def header(rel, active):
     brand_inner = brand_html(rel)
     items = [
@@ -203,7 +209,7 @@ def build_home():
     destaques = "".join(
         f'<li><a href="duvidas/{s}/">{esc(d[s]["pergunta"])}</a></li>' for s in ("lgpd-adequar-empresa", "vazamento-de-dados", "o-que-nao-pode-faltar-em-um-contrato")
     )
-    resumo_sobre = "".join(f"<p>{p}</p>" for p in SOBRE_PARAGRAFOS[:2])
+    resumo_sobre = "".join(f"<p>{p}</p>" for p in SOBRE_PARAGRAFOS)
     body = f"""
 <section class="hero"><div class="wrap">
 <span class="eyebrow">Advocacia · {esc(C['cidade'])} e online</span>
@@ -217,9 +223,9 @@ def build_home():
 <p>Atuação consultiva e contenciosa, sempre com explicações objetivas sobre cada etapa.</p></div>
 <div class="grid cols-4">{cards}</div></div></section>
 <section class="dark"><div class="wrap about-split">
-<div><span class="eyebrow">Sobre</span><h2>{esc(SOBRE_TITULO)}</h2>
+<div><span class="eyebrow">Sobre</span><h2 class="about-title">{esc(SOBRE_TITULO)}</h2>
 {resumo_sobre}
-<a class="btn" href="sobre/">Conheça minha trajetória</a></div>
+{edu_html(True)}</div>
 {photo_html(rel)}
 </div></section>
 <section><div class="wrap narrow">
@@ -326,13 +332,11 @@ def build_duvidas():
 def build_sobre():
     rel = "../"
     paras = "".join(f"<p>{p}</p>" for p in SOBRE_PARAGRAFOS)
-    form = "".join(f"<li><strong>{t}</strong><span>{s}</span></li>" for t, s in FORMACAO)
     body = head(rel, [("", "Início")], "Sobre") + f"""
 <section class="content"><div class="wrap about-page">
 <div>{photo_html(rel)}</div>
-<div><h2>{esc(SOBRE_TITULO)}</h2>{paras}
-<h2 style="margin-top:1.4em">Formação e certificações</h2>
-<ul class="timeline">{form}</ul>
+<div><h2 class="about-title">{esc(SOBRE_TITULO)}</h2>{paras}
+{edu_html(False)}
 <p style="margin-top:28px"><a class="btn" href="{wa()}" target="_blank" rel="noopener">{WA_SVG} Falar no WhatsApp</a>
 &nbsp; <a class="btn outline" href="{C['linkedin']}" target="_blank" rel="noopener">Ver LinkedIn</a></p>
 </div></div></section>"""

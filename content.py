@@ -356,14 +356,14 @@ DUVIDAS = [
     },
 ]
 
-# --- Página Sobre ---
-# Texto em primeira pessoa, baseado no perfil do LinkedIn. Ajuste livremente.
+# --- Sobre ---
+SOBRE_TITULO = "Thiago de Oliveira Lucas, OAB/ES 27.341"
+# Os dois primeiros parágrafos também aparecem no resumo da página inicial.
 SOBRE_PARAGRAFOS = [
-    "Sou advogado desde 2016, com atuação em Direito Civil e Empresarial. Hoje, meu foco principal é a proteção de dados e a conformidade com a LGPD.",
-    "Sempre tive interesse por tecnologia. Esse interesse me levou a estudar análise de dados e, depois, a cursar Análise e Desenvolvimento de Sistemas. Foi assim que percebi o quanto as empresas dependem de dados e o quanto isso cria responsabilidades jurídicas. Quando a LGPD entrou em vigor, encontrei o ponto de encontro entre as duas áreas de que mais gosto.",
-    "Essa formação dupla me permite ir além de redigir contratos e políticas de privacidade: consigo compreender como os sistemas funcionam, mapear o caminho dos dados dentro da empresa e alinhar a segurança da informação às exigências legais.",
-    "Meu trabalho é traduzir a lei para a rotina do negócio, de forma proporcional e prática, para reduzir riscos e manter a empresa em conformidade sem travar a operação.",
-    "Atuo também em contratos, direito civil e direito de família, sempre com atendimento reservado e linguagem clara.",
+    "Thiago de Oliveira Lucas é advogado em Vila Velha, no Espírito Santo, e atua desde 2016 nas áreas cível e empresarial. Gosta de explicar o direito em linguagem simples e de tratar cada caso com atenção aos detalhes.",
+    "Sempre teve interesse por tecnologia. Formou-se em Análise e Desenvolvimento de Sistemas e concluiu a pós-graduação em LGPD. Na proteção de dados, encontrou uma forma de unir as duas áreas de que mais gosta: o direito e a tecnologia.",
+    "Foi estagiário de pós-graduação no Ministério Público do Espírito Santo, experiência que reforçou o rigor na análise de documentos.",
+    "Casado e cristão, procura levar para o trabalho os valores em que acredita: respeito, honestidade e cuidado com as pessoas.",
 ]
 
 FORMACAO = [

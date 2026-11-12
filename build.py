@@ -13,7 +13,7 @@ import shutil
 from pathlib import Path
 from urllib.parse import quote
 
-from content import AREAS, DUVIDAS, GRUPOS, SOBRE_PARAGRAFOS, FORMACAO
+from content import AREAS, DUVIDAS, GRUPOS, SOBRE_PARAGRAFOS, SOBRE_TITULO, FORMACAO
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "docs"
@@ -203,6 +203,7 @@ def build_home():
     destaques = "".join(
         f'<li><a href="duvidas/{s}/">{esc(d[s]["pergunta"])}</a></li>' for s in ("lgpd-adequar-empresa", "vazamento-de-dados", "o-que-nao-pode-faltar-em-um-contrato")
     )
+    resumo_sobre = "".join(f"<p>{p}</p>" for p in SOBRE_PARAGRAFOS[:2])
     body = f"""
 <section class="hero"><div class="wrap">
 <span class="eyebrow">Advocacia · {esc(C['cidade'])} e online</span>
@@ -216,10 +217,8 @@ def build_home():
 <p>Atuação consultiva e contenciosa, sempre com explicações objetivas sobre cada etapa.</p></div>
 <div class="grid cols-4">{cards}</div></div></section>
 <section class="dark"><div class="wrap about-split">
-<div><span class="eyebrow">Sobre</span><h2>Direito e tecnologia, lado a lado</h2>
-<p>Sou Thiago de Oliveira Lucas, advogado desde 2016, com atuação em Direito Civil e Empresarial. Hoje concentro boa parte do meu trabalho na proteção de dados.</p>
-<p>Minha formação em tecnologia e análise de dados me permite entender como a informação circula dentro da empresa e traduzir a LGPD para a rotina do negócio, de forma prática e proporcional ao seu porte.</p>
-<ul class="checks"><li>Pós-graduado em LGPD</li><li>Pós-graduado em Direito Civil e Processual Civil</li><li>Graduado em Análise e Desenvolvimento de Sistemas</li><li>Certificação profissional em Análise de Dados (Google)</li></ul>
+<div><span class="eyebrow">Sobre</span><h2>{esc(SOBRE_TITULO)}</h2>
+{resumo_sobre}
 <a class="btn" href="sobre/">Conheça minha trajetória</a></div>
 {photo_html(rel)}
 </div></section>
@@ -328,10 +327,10 @@ def build_sobre():
     rel = "../"
     paras = "".join(f"<p>{p}</p>" for p in SOBRE_PARAGRAFOS)
     form = "".join(f"<li><strong>{t}</strong><span>{s}</span></li>" for t, s in FORMACAO)
-    body = head(rel, [("", "Início")], "Sobre", f"{esc(C['advogado'])} · {esc(C['oab'])}") + f"""
+    body = head(rel, [("", "Início")], "Sobre") + f"""
 <section class="content"><div class="wrap about-page">
 <div>{photo_html(rel)}</div>
-<div>{paras}
+<div><h2>{esc(SOBRE_TITULO)}</h2>{paras}
 <h2 style="margin-top:1.4em">Formação e certificações</h2>
 <ul class="timeline">{form}</ul>
 <p style="margin-top:28px"><a class="btn" href="{wa()}" target="_blank" rel="noopener">{WA_SVG} Falar no WhatsApp</a>

@@ -212,9 +212,9 @@ def build_home():
     resumo_sobre = "".join(f"<p>{p}</p>" for p in SOBRE_PARAGRAFOS)
     body = f"""
 <section class="hero"><div class="wrap">
-<span class="eyebrow">Advocacia · {esc(C['cidade'])} e online</span>
-<h1>Proteção de dados e segurança jurídica para o seu negócio</h1>
-<p class="lead">Atuação em LGPD, Contratos e Direito Civil, também com atendimento em Direito de Família. Orientação clara, sem juridiquês, adequada à realidade de cada cliente.</p>
+<span class="eyebrow">Advocacia · Vila Velha/ES · Atendimento presencial e online</span>
+<h1>Segurança jurídica para pessoas e empresas</h1>
+<p class="lead">Prestamos consultoria e assessoria jurídica em Proteção de Dados (LGPD), Contratos, Direito Civil e Direito de Família, com atendimento próximo e linguagem simples.</p>
 <div class="hero-actions"><a class="btn" href="{wa()}" target="_blank" rel="noopener">{WA_SVG} Falar no WhatsApp</a>
 <a class="btn ghost" href="areas-de-atuacao/">Conheça as áreas de atuação</a></div>
 </div></section>
@@ -247,7 +247,7 @@ def build_home():
         **({"url": C["site_url"] + "/"} if C["site_url"] else {}),
     }]
     page("", "TOL Advocacia — LGPD, Contratos e Direito Civil em Vila Velha/ES",
-         "Advocacia em Vila Velha/ES com foco em LGPD e proteção de dados, contratos, direito civil e direito de família. Atendimento presencial e online.",
+         "Consultoria e assessoria jurídica em LGPD e proteção de dados, contratos, direito civil e direito de família. Advocacia em Vila Velha/ES, com atendimento presencial e online.",
          body, "home", ld)
 
 

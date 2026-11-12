@@ -63,7 +63,7 @@ p{margin:0 0 1.1em}
 .hero{position:relative;background:radial-gradient(1200px 500px at 85% 0%,#2c4068 0%,transparent 60%),linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;overflow:hidden}
 .hero::after{content:"";position:absolute;right:6%;top:50%;transform:translateY(-50%);width:400px;height:460px;background:url(../img/logo-icone-light.png) center/contain no-repeat;opacity:.07;pointer-events:none}
 .hero .wrap{padding-top:96px;padding-bottom:104px;position:relative;z-index:1}
-.hero h1{color:#fff;max-width:17ch}
+.hero h1{color:#fff;max-width:22ch}
 .hero p.lead{max-width:56ch;font-size:1.15rem;color:#d8dde3}
 .eyebrow{display:block;font-size:.72rem;letter-spacing:.28em;text-transform:uppercase;color:var(--accent-light);font-weight:600;margin-bottom:18px}
 .hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:32px}

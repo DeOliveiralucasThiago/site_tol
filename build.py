@@ -13,7 +13,7 @@ import shutil
 from pathlib import Path
 from urllib.parse import quote
 
-from content import AREAS, DUVIDAS, GRUPOS, SOBRE_PARAGRAFOS, SOBRE_TITULO, FORMACAO
+from content import AREAS, DUVIDAS, GRUPOS, SOBRE_PARAGRAFOS, SOBRE_TITULO, FORMACAO, ATUALIZADO
 
 ROOT = Path(__file__).parent
 OUT = ROOT / "docs"
@@ -306,6 +306,7 @@ def build_duvidas():
     for q in DUVIDAS:
         rel = "../../"
         a = areas[q["area"]]
+        atualizado = f" Atualizado em {ATUALIZADO}." if q.get("atualizado") else ""
         outras = [x for x in DUVIDAS if x["grupo"] == q["grupo"] and x["slug"] != q["slug"]][:3]
         outras_html = ""
         if outras:
@@ -315,7 +316,7 @@ def build_duvidas():
 <section class="content"><div class="wrap layout"><article>
 <p class="answer">{q['resposta']}</p>
 {q['corpo']}
-<p class="note">Conteúdo de caráter informativo, com base na legislação em vigor na data de sua elaboração. Cada situação tem particularidades e deve ser analisada individualmente.</p>
+<p class="note">Conteúdo de caráter informativo, com base na legislação em vigor na data de sua elaboração.{atualizado} Cada situação tem particularidades e deve ser analisada individualmente.</p>
 {outras_html}
 </article>
 <aside class="aside">

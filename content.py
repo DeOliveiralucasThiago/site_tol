@@ -62,7 +62,7 @@ AREAS = [
             ("Orientação para assinatura.", "Formalização por assinatura física ou eletrônica."),
         ],
         "nota": "",
-        "duvidas": ["contrato-verbal", "o-que-nao-pode-faltar-em-um-contrato"],
+        "duvidas": ["contrato-verbal", "o-que-nao-pode-faltar-em-um-contrato", "assinatura-eletronica-contrato", "encerrar-contrato-antes-do-prazo", "clausula-lgpd-contratos", "pejotizacao-risco-vinculo"],
     },
     {
         "slug": "direito-civil",
@@ -88,7 +88,7 @@ AREAS = [
             ("Atuação.", "Condução da solução escolhida, mantendo você informado em cada etapa."),
         ],
         "nota": "",
-        "duvidas": ["cliente-nao-pagou"],
+        "duvidas": ["cliente-nao-pagou", "golpe-do-pix-banco-devolve", "negativacao-indevida-indenizacao", "divida-prescrita-cobranca", "juizado-especial-precisa-de-advogado", "inquilino-nao-paga-despejo"],
     },
     {
         "slug": "direito-de-familia",
@@ -113,7 +113,7 @@ AREAS = [
             ("Condução do processo.", "Elaboração de documentos, negociação e acompanhamento até a conclusão."),
         ],
         "nota": "",
-        "duvidas": ["divorcio-em-cartorio", "uniao-estavel-precisa-registrar"],
+        "duvidas": ["divorcio-em-cartorio", "uniao-estavel-precisa-registrar", "pix-pensao-alimenticia", "como-calcular-pensao-alimenticia", "guarda-compartilhada-como-funciona", "inventario-cartorio-ou-justica", "holding-familiar-evita-inventario"],
     },
 ]
 
@@ -355,6 +355,9 @@ DUVIDAS = [
 """,
     },
 ]
+
+from duvidas_extra import EXTRA, ATUALIZADO  # noqa: E402
+DUVIDAS += EXTRA
 
 # --- Sobre ---
 SOBRE_TITULO = "Thiago de Oliveira Lucas, OAB/ES 27.341"

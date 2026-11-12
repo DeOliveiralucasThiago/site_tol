@@ -16,7 +16,7 @@ AREAS = [
         "resumo": "Adequação à LGPD, políticas de privacidade, contratos com fornecedores e atuação como encarregado (DPO).",
         "chamada": "Adequação à LGPD que cabe na rotina e no porte da sua empresa.",
         "meta": "Advogado em Vila Velha/ES para adequação à LGPD: mapeamento de dados, política de privacidade, contratos, DPO e resposta a incidentes.",
-        "intro": "<p>A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) se aplica a qualquer empresa que trate dados pessoais de clientes, empregados, fornecedores ou usuários, inclusive pequenos negócios. O meu trabalho é traduzir a lei para a operação real: entender como os dados circulam na empresa, identificar riscos e organizar documentos e processos de forma proporcional ao seu porte.</p><p>Além da formação jurídica, tenho formação em tecnologia e em análise de dados, o que facilita o diálogo com equipes de TI e a compreensão dos sistemas por trás dos documentos.</p>",
+        "intro": "<p>A Lei Geral de Proteção de Dados (Lei nº 13.709/2018) se aplica a qualquer empresa que trate dados pessoais de clientes, empregados, fornecedores ou usuários, inclusive pequenos negócios. O nosso trabalho é traduzir a lei para a operação real: entender como os dados circulam na empresa, identificar riscos e organizar documentos e processos de forma proporcional ao seu porte.</p><p>Além da formação jurídica, a nossa atuação conta com formação em tecnologia e em análise de dados, o que facilita o diálogo com equipes de TI e a compreensão dos sistemas por trás dos documentos.</p>",
         "itens": [
             "<strong>Diagnóstico e mapeamento de dados:</strong> onde os dados pessoais são coletados, armazenados, compartilhados e descartados.",
             "<strong>Política de Privacidade, Termos de Uso e avisos</strong> adequados ao seu site, aplicativo ou atendimento.",
@@ -29,7 +29,7 @@ AREAS = [
         ],
         "publico": "Empresas de qualquer porte, startups, comércio eletrônico, clínicas, escritórios, condomínios, prestadores de serviço e todo negócio que lida com dados de clientes ou colaboradores.",
         "passos": [
-            ("Conversa inicial.", "Entendo a sua atividade, os tipos de dados e as principais preocupações."),
+            ("Conversa inicial.", "Entendemos a sua atividade, os tipos de dados e as principais preocupações."),
             ("Diagnóstico.", "Levantamento de como os dados são tratados hoje e dos pontos de atenção."),
             ("Plano de adequação.", "Priorização do que precisa ser feito, em linguagem prática e com cronograma."),
             ("Implementação e acompanhamento.", "Elaboração de documentos, orientação à equipe e revisões periódicas."),
@@ -44,7 +44,7 @@ AREAS = [
         "resumo": "Elaboração, revisão e análise de contratos empresariais e civis, com atenção a riscos e cláusulas.",
         "chamada": "Contratos claros previnem conflitos e protegem o que foi combinado.",
         "meta": "Elaboração e revisão de contratos em Vila Velha/ES: prestação de serviços, compra e venda, locação, acordo de sócios e contratos digitais.",
-        "intro": "<p>Um bom contrato é a forma mais econômica de evitar problemas. Elaboro e reviso contratos de acordo com a realidade do negócio, deixando claro o que cada parte deve fazer, em quanto tempo e o que acontece se algo não sair como o esperado.</p>",
+        "intro": "<p>Um bom contrato é a forma mais econômica de evitar problemas. Elaboramos e revisamos contratos de acordo com a realidade do negócio, deixando claro o que cada parte deve fazer, em quanto tempo e o que acontece se algo não sair como o esperado.</p>",
         "itens": [
             "Elaboração de contratos sob medida.",
             "Revisão e análise de riscos e cláusulas desfavoráveis antes da assinatura.",
@@ -71,7 +71,7 @@ AREAS = [
         "resumo": "Cobrança, responsabilidade civil, obrigações e demais conflitos patrimoniais, na esfera extrajudicial e judicial.",
         "chamada": "Orientação segura para resolver conflitos patrimoniais, dentro e fora do Judiciário.",
         "meta": "Advocacia cível em Vila Velha/ES: cobrança, responsabilidade civil, indenizações, locação e demais questões patrimoniais.",
-        "intro": "<p>Atuo em questões cíveis do dia a dia de pessoas e empresas, priorizando, sempre que possível, soluções negociadas e extrajudiciais, e preparando o caso com cuidado quando o processo é inevitável.</p>",
+        "intro": "<p>Atuamos em questões cíveis do dia a dia de pessoas e empresas, priorizando, sempre que possível, soluções negociadas e extrajudiciais, e preparando o caso com cuidado quando o processo é inevitável.</p>",
         "itens": [
             "Cobrança e recuperação de crédito (extrajudicial e judicial).",
             "Responsabilidade civil e reparação de danos.",

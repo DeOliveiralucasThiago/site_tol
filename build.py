@@ -181,7 +181,7 @@ def page(path, title, desc, body, active="", jsonld=None, noindex=False):
         PAGES.append(path)
 
 
-def cta(rel, titulo="Ficou com alguma dúvida?", texto="Conte brevemente o seu caso. Respondo com clareza e sem compromisso de contratação."):
+def cta(rel, titulo="Ficou com alguma dúvida?", texto="Conte brevemente o seu caso. Respondemos com clareza e sem compromisso de contratação."):
     return f"""<section class="cta"><div class="wrap"><h2>{titulo}</h2><p>{texto}</p>
 <a class="btn" href="{wa()}" target="_blank" rel="noopener">{WA_SVG} Falar no WhatsApp</a></div></section>"""
 
@@ -233,7 +233,7 @@ def build_home():
 <ul class="faq-list">{destaques}</ul>
 <p style="text-align:center;margin-top:34px"><a class="btn outline" href="duvidas/">Ver todas as dúvidas</a></p>
 </div></section>
-{cta(rel, "Vamos conversar?", "Conte brevemente o que você precisa. Retorno com clareza sobre os próximos passos.")}
+{cta(rel, "Vamos conversar?", "Conte brevemente o que você precisa. Retornamos com clareza sobre os próximos passos.")}
 """
     ld = [{
         "@context": "https://schema.org",
@@ -275,7 +275,7 @@ def build_areas():
         body = head(rel, [("", "Início"), ("areas-de-atuacao/", "Áreas de atuação")], esc(a["titulo"]), esc(a["chamada"])) + f"""
 <section class="content"><div class="wrap layout"><div>
 {a['intro']}
-<h2>Como posso ajudar</h2><ul>{itens}</ul>
+<h2>Como podemos ajudar</h2><ul>{itens}</ul>
 <h2>Para quem</h2><p>{a['publico']}</p>
 <h2>Como funciona</h2><ol>{passos}</ol>
 {extra}
@@ -319,7 +319,7 @@ def build_duvidas():
 {outras_html}
 </article>
 <aside class="aside">
-<div class="box dark"><h3>Quer analisar o seu caso?</h3><p style="font-size:.92rem">Fale comigo e conte brevemente a sua situação.</p>
+<div class="box dark"><h3>Quer analisar o seu caso?</h3><p style="font-size:.92rem">Fale conosco e conte brevemente a sua situação.</p>
 <a class="btn" href="{wa('Olá! Li a página “' + q['pergunta'] + '” e gostaria de conversar.')}" target="_blank" rel="noopener">{WA_SVG} WhatsApp</a></div>
 <div class="box"><h3>Área relacionada</h3><ul><li><a href="{rel}areas-de-atuacao/{a['slug']}/">{esc(a['titulo'])}</a></li></ul></div>
 </aside></div></section>"""
